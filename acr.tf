@@ -5,8 +5,5 @@ resource "azurerm_container_registry" "main" {
   sku                      = "${var.acr_tier}"
   admin_enabled            = "${var.acr_admin_enabled}"
 
-  tags = {
-    owner-department = "${var.tag_owner}"
-    environment = "${var.tag_environment}"
-  }
+  tags = "${var.default_tags}"
 }

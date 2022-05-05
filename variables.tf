@@ -5,14 +5,11 @@ variable "envirioment" {
   description = "Specifies the name of the envirioment"
   type = string
 }
-variable "tag_environment" {
+variable "default_tags" {
   description = "A mapping of tags to assign to the resource."
-  type = string
+  type = map
 }
-variable "tag_owner" {
-  description = "A mapping of tags to assign to the resource."
-  type = string
-}
+
 ############################
 #Resource gropus vars
 ############################
