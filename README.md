@@ -48,9 +48,13 @@ No modules.
 
 ## How to use
 ```
+provider "azurerm" {
+features {}
+}
+
 module "acr" {
   source  = "spy86/acr/azure"
-  version = "1.0.2"
+  version = "1.0.3"
   
   envirioment = "dev"
   acr_name    = "registry4test"
