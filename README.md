@@ -45,30 +45,3 @@ No modules.
 | <a name="output_id"></a> [id](#output\_id) | The ID of the Container Registry. |
 | <a name="output_login_server"></a> [login\_server](#output\_login\_server) | The URL that can be used to log into the container registry. |
 <!-- END_TF_DOCS -->
-
-## How to use
-```
-provider "azurerm" {
-features {}
-}
-
-module "acr" {
-  source  = "spy86/acr/azure"
-  version = "1.0.3"
-  
-  envirioment = "dev"
-  acr_name    = "registry4test"
-  resource_group_name = "weu-test-rg"
-  resource_group_location =  "West Europe"
-  acr_tier = "Basic"
-  acr_admin_enabled = "true"
-
-  default_tags = {
-      Administrator = "Someone"
-      Department = "IT"
-      CostCentre = "ABC123"
-      ContactPerson = "Someone@example.com"
-      ManagedByTerraform = "True"
-}
-}
-```
