@@ -3,8 +3,8 @@ features {}
 }
 
 module "acr" {
-  source  = "spy86/acr/azure"
-  version = "1.0.4"
+  source  = "Think-Cube/container-registry/azure"
+  version = "1.0.0"
   
   envirioment = "dev"
   acr_name    = "registry4test"
@@ -12,12 +12,11 @@ module "acr" {
   resource_group_location =  "West Europe"
   acr_tier = "Basic"
   acr_admin_enabled = "true"
-
   default_tags = {
-      Administrator = "Someone"
-      Department = "IT"
-      CostCentre = "ABC123"
-      ContactPerson = "Someone@example.com"
+      Administrator     = "John Doe"
+      Department        = "IT"
+      CostCentre        = "CC123"
+      ContactPerson     = "Jane Smith"
       ManagedByTerraform = "True"
 }
 }
