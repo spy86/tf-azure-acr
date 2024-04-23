@@ -8,7 +8,7 @@ module "acr" {
   
   envirioment = "dev"
   acr_name    = "registry4test"
-  resource_group_name = "weu-test-rg"
+  resource_group_name = "dev-test-weu-rg"
   resource_group_location =  "West Europe"
   acr_tier = "Basic"
   acr_admin_enabled = "true"
