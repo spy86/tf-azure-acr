@@ -19,18 +19,16 @@ variable "resource_group_name" {
 }
 
 variable "acr_tier" {
-  description = "The pricing tier (SKU) of the Azure Container Registry. Valid options are 'Basic', 'Standard', and 'Premium'. Default is 'Basic'."
+  description = "The SKU name of the container registry. Possible values are Basic, Standard and Premium. Classic (which was previously Basic) is supported only for existing resources."
   type        = string
   default     = "Basic"
 }
-
 variable "acr_name" {
-  description = "The name of the Azure Container Registry. Modifying this value will recreate the resource."
+  description = "Specifies the name of the Container Registry. Changing this forces a new resource to be created."
   type        = string
 }
-
 variable "acr_admin_enabled" {
-  description = "A boolean flag indicating whether the admin user account for the Container Registry is enabled. Default is false."
-  type        = bool
-  default     = false
+  description = "Specifies whether the admin user is enabled. Defaults to false."
+  type        = string
+  default     = "false"
 }
